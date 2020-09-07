@@ -25,6 +25,27 @@ nav {
     text-align:center;
 }
 
+#progressBar{
+    background:#fcfcfc;
+    width: 600px;
+    height: 20px;
+    max-width: 96%;
+    border:2px solid lightblue;
+    border-radius:15px;
+    display: flex;
+    justify-content: left;
+    margin: auto;
+    margin-top: 15px;
+}
+
+#progress{
+    background: chartreuse;
+    height : 16px;
+    width: 0%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
 #buttons > div{
     background : teal;
     border : 2px solid darkblue;
