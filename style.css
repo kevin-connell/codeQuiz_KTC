@@ -75,6 +75,24 @@ nav {
     text-align:center;
 }
 
+
+#scoreTable td, #scoreTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+#scoreTable tr:hover {
+    background-color: #ddd;
+}
+  
+#scoreTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
 body {
     margin : 0;
     

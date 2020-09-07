@@ -50,6 +50,7 @@ var statusEl = document.querySelector("#status")
 var progressPerc = "0%"
 var largeNumberEl = document.querySelector("#largeNumber")
 var tempScore = 0
+var navEl = document.querySelector("nav")
 
 function setTime() {
     var timerInterval = setInterval(function () {
@@ -59,7 +60,7 @@ function setTime() {
         if (timeLeft === 0 || i == masterList.length) {
             clearInterval(timerInterval);
             tempScore = timeLeft
-            localStorage.setItem("Temporary Score", timeLeft);
+            localStorage.setItem("TemporaryScore", timeLeft);
             window.location.href="scoresubmit.html";
         }
     }, 1000);
@@ -98,6 +99,13 @@ tileEl.addEventListener("click", function (event) {
     }
 
 
+});
+
+navEl.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (event.target.textContent == "High Scores") {
+        window.location.href="highscores.html"
+    }
 });
 
 function newQuestion(x) {
