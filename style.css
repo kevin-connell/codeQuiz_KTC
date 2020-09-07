@@ -1,0 +1,42 @@
+nav {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#quizTile{
+    background:#fcfcfc;
+    width: 600px;
+    max-width: 96%;
+    border:2px solid lightblue;
+    border-radius:25px;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    margin: auto;
+    padding: 15px;
+}
+
+#quizTile > h3{
+    text-align:center;
+}
+
+#buttons > div{
+    background : teal;
+    border : 2px solid darkblue;
+    margin : 10px;
+    padding : 7.5px;
+    border-radius : 10px;
+}
+
+#buttons > div:hover{
+    background : rgb(58, 199, 199);
+}
+
+#quizTile > button {
+    text-align:center;
+}

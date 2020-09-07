@@ -20,35 +20,21 @@
 </head>
 
 <body>
+
     <nav>
-        <h2>Highscores</h2>
-        <h2>Timer: <span>00</span></h2>
+        <h2 class="highscoreBtn">Highscores</h2>
+        <h2 class="timerBox">Timer: <span id="timer">00</span></h2>
     </nav>
-    <main>
-        <h3>Question</h3>
-        <section>
-            <ul>
-                <li>Answer 1</li>
-                <li>Answer 2</li>
-                <li>Answer 3</li>
-                <li>Answer 4</li>
-            </ul>
+    <main id="quizTile">
+        <h3 id="question">Question</h3>
+        <section id = "buttons">
+            <div class="answer" id="a1">Answer 1</div>
+            <div class="answer" id="a2">Answer 2</div>
+            <div class="answer" id="a3">Answer 3</div>
+            <div class="answer" id="a4">Answer 4</div>
         </section>
-        <button>Start</button>
+        <h3>Start</h3>
     </main>
-
-
-
-
-
-
-
-
-
-    <!-- <nav class="nav justify-content-end">
-        <a class="nav-link" href="#">Link</a>
-        <h2 class="justify-content-end">Timer: <span id="timeLeft"></span></h2>
-    </nav> -->
+    <script src="script.js"></script>
 </body>
-
 </html>
