@@ -17,12 +17,24 @@ nav {
     display: flex;
     justify-content: center;
     flex-direction:column;
-    margin: auto;
     padding: 15px;
+    margin: auto;
+    box-sizing: border-box;
 }
 
-#quizTile > h3{
+#quizTile > h3, h1, figure{
     text-align:center;
+}
+
+#largeNumber {
+    font-size: 64px;
+    font-weight: bold;
+
+}
+
+#userForm{
+    margin : auto;
+    padding-bottom: 15px;
 }
 
 #progressBar{
@@ -36,6 +48,7 @@ nav {
     justify-content: left;
     margin: auto;
     margin-top: 15px;
+    box-sizing: border-box;
 }
 
 #progress{
@@ -60,4 +73,9 @@ nav {
 
 #quizTile > button {
     text-align:center;
+}
+
+body {
+    margin : 0;
+    
 }

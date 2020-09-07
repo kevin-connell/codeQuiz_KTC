@@ -48,11 +48,23 @@ var progressEl = document.querySelector("#progress")
 var tileEl = document.querySelector("#quizTile")
 var statusEl = document.querySelector("#status")
 var progressPerc = "0%"
-// for (var i = 0; i < masterList.length - 3; i++) {
-//     var progressPerc = (i/masterList.length) * 100 + "%"
-//     newQuestion(masterList[i])
+var largeNumberEl = document.querySelector("#largeNumber")
+var tempScore = 0
 
-// }
+function setTime() {
+    var timerInterval = setInterval(function () {
+        timeLeft--;
+        timerEl.textContent = timeLeft
+
+        if (timeLeft === 0 || i == masterList.length) {
+            clearInterval(timerInterval);
+            tempScore = timeLeft
+            localStorage.setItem("Temporary Score", timeLeft);
+            window.location.href="scoresubmit.html";
+        }
+    }, 1000);
+}
+
 tileEl.addEventListener("click", function (event) {
     event.preventDefault();
     if (event.target.textContent == "Start") {
@@ -87,19 +99,6 @@ tileEl.addEventListener("click", function (event) {
 
 
 });
-
-function setTime() {
-    var timerInterval = setInterval(function () {
-        timeLeft--;
-        timerEl.textContent = timeLeft
-
-        if (timeLeft === 0 || i == masterList.length) {
-            clearInterval(timerInterval);
-            alert("Your score is " + timeLeft)
-        }
-
-    }, 1000);
-}
 
 function newQuestion(x) {
     progressPerc = (i / masterList.length) * 100 + "%"
