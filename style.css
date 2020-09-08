@@ -75,6 +75,11 @@ nav {
     text-align:center;
 }
 
+.centerME {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
 
 #scoreTable td, #scoreTable th {
     border: 1px solid #ddd;
