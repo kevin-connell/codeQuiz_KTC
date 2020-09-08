@@ -6,13 +6,14 @@ nav {
     margin-right: 4%;
     margin-top: 10px;
     margin-bottom: 10px;
+    color: white;
 }
 
 #quizTile{
     background:#fcfcfc;
     width: 600px;
     max-width: 96%;
-    border:2px solid lightblue;
+    border:5px solid #f8b195;
     border-radius:25px;
     display: flex;
     justify-content: center;
@@ -22,13 +23,15 @@ nav {
     box-sizing: border-box;
 }
 
-#quizTile > h3, h1, figure{
+#quizTile > h3, h2, h1, figure{
     text-align:center;
 }
 
 #largeNumber {
-    font-size: 64px;
+    font-size: 110px;
     font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 10px;
 
 }
 
@@ -40,9 +43,9 @@ nav {
 #progressBar{
     background:#fcfcfc;
     width: 600px;
-    height: 20px;
+    height: 26px;
     max-width: 96%;
-    border:2px solid lightblue;
+    border:5px solid #f8b195;
     border-radius:15px;
     display: flex;
     justify-content: left;
@@ -52,7 +55,7 @@ nav {
 }
 
 #progress{
-    background: chartreuse;
+    background: rgb(175, 245, 105);
     height : 16px;
     width: 0%;
     border-bottom-left-radius: 15px;
@@ -60,8 +63,8 @@ nav {
 }
 
 #buttons > div{
-    background : teal;
-    border : 2px solid darkblue;
+    background : #f67280;
+    border : 5px solid #f8b195;
     margin : 10px;
     padding : 7.5px;
     border-radius : 10px;
@@ -85,6 +88,16 @@ nav {
     border: 1px solid #ddd;
     padding: 8px;
 }
+
+#submit {
+    font-family: 'Grandstander', cursive;
+    border: none;
+    height: 25px;
+    padding-top: 5px;
+    color: white;
+    background-color: rgb(58, 199, 199);
+    border-radius:6px;
+}
   
 #scoreTable tr:hover {
     background-color: #ddd;
@@ -94,11 +107,28 @@ nav {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #4CAF50;
+    background-color: rgb(58, 199, 199);
     color: white;
 }
 
 body {
     margin : 0;
-    
+    background-color: #6c5b7b;
+    font-family: 'Grandstander', cursive;
 }
+
+a:link {
+    color: white;
+  }
+  
+  a:visited {
+    color: white;
+  }
+  
+  a:hover {
+    color: white;
+  }
+  
+  a:active {
+    color: lightgrey;
+  }
