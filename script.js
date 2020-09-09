@@ -47,7 +47,7 @@ var question = document.querySelector("#question");
 var progressEl = document.querySelector("#progress")
 var tileEl = document.querySelector("#quizTile")
 var statusEl = document.querySelector("#status")
-var progressPerc = "0%"
+var currentPerc = "0%"
 var largeNumberEl = document.querySelector("#largeNumber")
 var tempScore = 0
 var navEl = document.querySelector("nav")
@@ -61,7 +61,7 @@ function setTime() {
             clearInterval(timerInterval);
             tempScore = timeLeft
             localStorage.setItem("TemporaryScore", timeLeft);
-            window.location.href="scoresubmit.html";
+            window.location.href = "scoresubmit.html";
         }
     }, 1000);
 }
@@ -104,13 +104,14 @@ tileEl.addEventListener("click", function (event) {
 navEl.addEventListener("click", function (event) {
     event.preventDefault();
     if (event.target.textContent == "High Scores") {
-        window.location.href="highscores.html"
+        window.location.href = "highscores.html"
     }
 });
 
 function newQuestion(x) {
-    progressPerc = (i / masterList.length) * 100 + "%"
-    progressEl.setAttribute("style", "width : " + progressPerc);
+    // currentPerc = (i / masterList.length) * 100 + "%"
+    // progressEl.setAttribute("style", "width : " + currentPerc);
+    loadingPerc()
     question.textContent = x.query;
     answerOptions = [x.right, x.wrong1, x.wrong2, x.wrong3];
     console.log(answerOptions)
@@ -120,4 +121,18 @@ function newQuestion(x) {
     answer2.textContent = answerOptions[1];
     answer3.textContent = answerOptions[2];
     answer4.textContent = answerOptions[3];
+}
+
+function loadingPerc() {
+    pastPerc = ((i - 1) / masterList.length) * 100
+    currentPerc = (i / masterList.length) * 100
+    var load = setInterval(frame, 15);
+    function frame() {
+        if (pastPerc == currentPerc) {
+            clearInterval(load);
+        } else {
+            pastPerc++;
+            progressEl.style.width = pastPerc + '%';
+        }
+    }
 }
