@@ -111,6 +111,12 @@ nav {
     color: white;
 }
 
+#scoreTable {
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 body {
     margin : 0;
     background-color: #6c5b7b;

@@ -6,7 +6,7 @@ console.log(highScores[0].score)
 
 var tableInnerSt = "";
 
-for (let i = 0; i < highScores.length; i++) {
+for (i = 0; i < highScores.length; i++) {
     tableInnerSt = tableInnerSt.concat(" <tr> <td>" + highScores[i].user + "</td> <td>" + highScores[i].score + "</td> </tr>")
 };
 
